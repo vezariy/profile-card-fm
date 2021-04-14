@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
+
+// Variables
+$max-width: 1440px;
+$mobile-width: 375px;
+$main-color: rgb(25, 162, 174);
+$main-text-color: hsl(229, 23%, 23%);
+$secondary-text-color: hsl(227, 10%, 46%);
+
+// General
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+// Main part
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $main-color;
+    background-image: 
+        url("https://res.cloudinary.com/vezaliy/image/upload/v1618387610/bg-pattern-top_qw1vkv.svg"), 
+        url("https://res.cloudinary.com/vezaliy/image/upload/v1618387610/bg-pattern-bottom_ewbqkl.svg")
+        ;
+    background-size: 55%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: -30% 310%, 120% -270%;
+    .main {
+        height: auto;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        .container {
+            box-shadow: 1px 6px 10px rgba(0,0,0,0.5);    
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px auto;
+            height: 550px;
+            width: 500px;
+            background-image: 
+            url("https://res.cloudinary.com/vezaliy/image/upload/v1618387610/bg-pattern-card_tisvl7.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+    
+            &-image {
+                position: relative;
+                top: 90px;
+                background: white;
+                border-radius: 45vmax;
+                padding: 5px;
+                img {
+                    border-radius: 45vmax;
+                }
+            }
+    
+            &-info {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 40%;
+                align-items: center;
+                width: 500px;
+                color: $main-text-color;
+                background: white;
+                padding-top: 50px;
+                &-element {
+                    flex-direction: column;
+                    align-items: center;
+                    h2 {
+                        display: inline;
+                    }
+                }
+                .main-info {
+                    flex-direction: row;
+                    span {
+                        margin-left: 5px;
+                        color: $secondary-text-color;
+                        font-size: 1.5rem;
+                    }
+                }
+                .place {
+                    margin-top: 20px;
+                    color: $secondary-text-color;
+                    font-size: 1.4rem;
+                }
+            }
+            &-sub {
+                background: white;
+                color: $main-text-color;
+                border-top: 1px lightgray solid;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 35%;
+                padding-bottom: 1rem;
+                width: 500px;
+                border-end-end-radius: 20px;
+                border-end-start-radius: 20px;
+                &-element {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                    span {
+                        font-weight: bold;
+                    }
+                    p {
+                        color: $secondary-text-color;
+                        margin: 10px;
+                    }  
+                }
+                
+            }
+        }
+        
+    }
+}
+
+// Mobile 
+@media (max-width: 375px) { 
+    body {
+        background-size: 105%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 1030% -220%, 120% 570%;
+    .main {
+        .container {
+            box-shadow: 1px 6px 10px rgba(0,0,0,0.5);             width: 300px;
+            height: 400px;
+            margin: 170px  auto 0 auto;
+            &-image {
+                top: 60px;
+                img{
+                    
+                    border-radius: 35vmax;
+                }
+            }
+            &-info {
+                margin-top: 0;
+                width: 300px;
+                .main-info {
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+                .place {
+                    font-size: 1rem;
+                }
+                &-element {
+                    font-size: .8rem;
+                }
+            }
+            &-sub {
+                height: 30%;
+                width: 300px;
+                padding-bottom: 0;
+                &-element {
+                    font-size: 1rem;
+                    margin: 20px;
+                        p {
+                            margin: 10;
+                        }
+                    }
+                }
+            }
+        }
+        .attribution {
+            margin-top: 100px;
+        }
+    }
+}
